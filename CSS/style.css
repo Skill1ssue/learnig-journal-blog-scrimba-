@@ -1,0 +1,326 @@
+/* 
+===========================================================================
+Global Reset 
+===========================================================================
+*/
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 
+============================================================================
+Global Styles
+============================================================================
+*/
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    padding: 1.5em;
+}
+
+.rotated {
+    transform: rotate(-90deg);
+}
+
+.hidden {
+    display: none;
+}
+
+p {
+    line-height: 1.5;
+}
+
+button {
+    font-family: "Source sans 3", sans-serif;
+}
+
+a {
+    width: 100%;
+    color: black;
+    text-decoration: none;
+}
+
+/* 
+============================================================================
+Navigation Bar
+============================================================================
+*/
+
+header {
+    align-items: center;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    display: flex;
+    gap: 0.3em;
+    align-items: center;
+}
+
+.nav-logo-img {
+    width: 2em;
+
+}
+
+.nav-logo-text {
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 1.125rem;
+    letter-spacing: -0.5px;
+}
+
+/* Mobile Navigation */
+
+span.hamburger-icon {
+    font-size: 30px;
+    font-variation-settings: 'OPSZ' 30;
+    transition: all ease-in-out .3s;
+}
+
+.mobile-menu {position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    background-color: rgb(253, 253, 253);
+    transition: all ease-in-out .3s;
+}
+
+.mobile-menu nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile-menu nav ul li {
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-menu nav ul li:not(:last-child) {
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+/* Desktop Navigation */
+
+.nav-menu-desktop {
+    display: none;
+}
+
+/* 
+============================================================================================
+Main Section
+============================================================================================
+*/
+
+/* Hero */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-top: 10vh;
+    padding-bottom: 4vh;
+    gap: 0.5em;
+    background-image: url('/IMAGES/article-image-hero.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.hero h1 {
+    font-size: min(8vw, 5rem);
+    line-height: 1;
+}
+
+/* Blogs */
+
+.blogs {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    gap: 3em 1.5em;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+article img {
+    width: 100%;
+    aspect-ratio: 6 / 4;
+    object-fit: cover;
+}
+
+article h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+button {
+    text-align: center;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1em;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* 
+===========================================================================================
+Footer
+===========================================================================================
+*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 3em;
+    color: white;
+    background-color: #202020;
+}
+
+.copyright {
+    font-weight: 300;
+}
+
+/* 
+===========================================================================================Media Queries
+===========================================================================================*/
+
+/* Tablets */
+
+@media (min-width:600px) {
+
+    .hero {
+        padding-top: 15vh;
+    }
+
+    .hero p {
+        max-width: 90%;    
+        font-size: 1.1rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    }
+
+    article p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width:769px) {
+
+    .nav-menu-desktop {
+        display: block;
+    }
+
+    .nav-menu-desktop ul {
+        display: flex;
+        gap: 1em;
+        font-size: 1.125rem;
+        font-weight: bold;
+    }
+
+    .nav-menu-desktop ul li {
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    span.hamburger-icon {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 20vh;
+    }
+
+    .hero p {
+        max-width: 80%;    
+        font-size: 1.3rem;
+    }
+
+      time {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        padding: 2em;
+    }
+}
+
+@media (min-width:1025px) {
+    .container {
+        padding: 1em 10%
+    }
+
+    .nav-menu-desktop ul {
+        font-size: 1rem;
+
+    }
+
+    .hero {
+        padding-top: 50vh;
+        padding-bottom: 6em;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero p {
+        max-width: 60%;
+    }
+
+    .grid-container {
+        padding: 5em 10%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3em;
+    }
+
+    footer {
+        padding: 1.5em;
+    }
+
+    footer span {
+        font-size: 0.8rem;
+    }
+
+}
+
+
+
+
+
+
