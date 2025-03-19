@@ -14,14 +14,16 @@
 <body>
     <header>
         <div class="main-nav container">
-            <div class="nav-logo">
-                <img src="/IMAGES/logo.png" alt="Site Logo" class="nav-logo-img">
-                <span class="nav-logo-text">My learning journal</span>
+            <div>
+                <a href="/index.html" class="nav-logo">
+                    <img src="/IMAGES/logo.png" alt="Site Logo" class="nav-logo-img">
+                    <span class="nav-logo-text">My learning journal</span>
+                </a>
             </div>
             <nav class="nav-menu-desktop">
                 <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT ME</a></li>
+                    <li><a href="/post.html">HOME</a></li>
+                    <li><a href="/about.html">ABOUT ME</a></li>
                 </ul>
             </nav>
             <span id="hamburger-icon" class="material-symbols-outlined hamburger-icon">menu_open</span>
@@ -29,17 +31,19 @@
         <div class="mobile-menu hidden">
             <nav>
                 <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT ME</a></li>
+                    <li><a href="/post.html">HOME</a></li>
+                    <li><a href="/about.html">ABOUT ME</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section class="hero container">
-            <time datetime="2022-07-23">JULY 23, 2022</time>
-            <h1>My new journey as a bootcamp student.</h1>
-            <p>After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>
+        <section class="hero">
+            <div class="container">
+                <time datetime="2022-07-23">JULY 23, 2022</time>
+                <h1>My new journey as a bootcamp student.</h1>
+                <p>After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>
+            </div>
         </section>
         <section class="blogs">
             <div class="grid-container container">
@@ -80,7 +84,7 @@
                     <p>I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
                 </article>
             </div>
-            <button id="view-more">View More</button>
+            <button class="view-more" id="view-more">View More</button>
         </section>
     </main>
     <footer>
